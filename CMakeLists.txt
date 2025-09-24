@@ -5,10 +5,9 @@ project(MyApp VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -g")
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
 
-set(SOURCES src/main.cpp)
+add_executable(myapp src/main.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(TARGETS myapp DESTINATION bin)
