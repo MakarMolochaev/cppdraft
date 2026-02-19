@@ -15,7 +15,7 @@ clean:
 
 run: debug
 	@./$(BUILD_DIR)/$(TARGET)
-h
+
 rebuild: clean debug
 
 help:
